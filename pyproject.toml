@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cv-autopilot"
+version = "0.1.0"
+description = "Classical lane detection for recorded dashcam footage"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "opencv-python-headless>=4.8"]
+
+[project.scripts]
+cv-autopilot = "cv_autopilot.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
